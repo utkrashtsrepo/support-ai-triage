@@ -1,0 +1,419 @@
+[
+  {
+    "id": "T01",
+    "category": "Billing",
+    "confidence_score": 0.95,
+    "explanation": "Customer asks for an explanation of a ₹999 subscription charge on their account.",
+    "missing_information": [],
+    "detected_intents": [
+      "Billing"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T02",
+    "category": "Billing",
+    "confidence_score": 0.95,
+    "explanation": "Customer reports a declined credit card payment during subscription renewal.",
+    "missing_information": [],
+    "detected_intents": [
+      "Billing"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T03",
+    "category": "Billing",
+    "confidence_score": 0.95,
+    "explanation": "Customer reports two identical ₹499 charges on their statement for one subscription.",
+    "missing_information": [],
+    "detected_intents": [
+      "Billing"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T04",
+    "category": "Billing",
+    "confidence_score": 0.9,
+    "explanation": "Customer requests an invoice for a payment made yesterday.",
+    "missing_information": [
+      "Transaction or invoice identifier"
+    ],
+    "detected_intents": [
+      "Billing"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T05",
+    "category": "Login",
+    "confidence_score": 0.95,
+    "explanation": "Customer forgot password and cannot log into account.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T06",
+    "category": "Login",
+    "confidence_score": 0.95,
+    "explanation": "Customer reports that sign-in OTP is not being received.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T07",
+    "category": "Login",
+    "confidence_score": 0.95,
+    "explanation": "Website rejects sign-in attempt despite correct account credentials.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T08",
+    "category": "Login",
+    "confidence_score": 0.95,
+    "explanation": "Customer asks for instructions to reset account password.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T09",
+    "category": "Refund",
+    "confidence_score": 0.95,
+    "explanation": "Customer explicitly requests a refund for their subscription.",
+    "missing_information": [
+      "Transaction or subscription identifier",
+      "Purchase date"
+    ],
+    "detected_intents": [
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T10",
+    "category": "Refund",
+    "confidence_score": 0.95,
+    "explanation": "Customer inquires about refund timing following subscription cancellation.",
+    "missing_information": [
+      "Transaction or subscription identifier"
+    ],
+    "detected_intents": [
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T11",
+    "category": "Refund",
+    "confidence_score": 0.95,
+    "explanation": "Customer explicitly requests the return of a ₹799 subscription payment.",
+    "missing_information": [
+      "Transaction or subscription identifier",
+      "Purchase date"
+    ],
+    "detected_intents": [
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T12",
+    "category": "Refund",
+    "confidence_score": 0.95,
+    "explanation": "Customer reports that an approved refund has not arrived after three days.",
+    "missing_information": [
+      "Transaction or refund identifier"
+    ],
+    "detected_intents": [
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T13",
+    "category": "Technical",
+    "confidence_score": 0.9,
+    "explanation": "Customer reports Android app crashing upon opening settings page.",
+    "missing_information": [
+      "Device/OS version",
+      "App version",
+      "Steps to reproduce"
+    ],
+    "detected_intents": [
+      "Technical"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T14",
+    "category": "Technical",
+    "confidence_score": 0.9,
+    "explanation": "Customer reports export button fails to respond when clicked.",
+    "missing_information": [
+      "Browser/device details",
+      "Steps to reproduce"
+    ],
+    "detected_intents": [
+      "Technical"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T15",
+    "category": "Technical",
+    "confidence_score": 0.9,
+    "explanation": "Customer encounters a 500 error while uploading a file.",
+    "missing_information": [
+      "File type/size",
+      "Browser/device details",
+      "Steps to reproduce"
+    ],
+    "detected_intents": [
+      "Technical"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T16",
+    "category": "Technical",
+    "confidence_score": 0.9,
+    "explanation": "Customer reports dashboard stuck loading indefinitely.",
+    "missing_information": [
+      "Browser/device details",
+      "Steps to reproduce"
+    ],
+    "detected_intents": [
+      "Technical"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T17",
+    "category": "Refund",
+    "confidence_score": 0.9,
+    "explanation": "Customer explicitly requests one payment back after being charged twice.",
+    "missing_information": [
+      "Transaction identifier",
+      "Date of transaction"
+    ],
+    "detected_intents": [
+      "Billing",
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T18",
+    "category": "Needs Review",
+    "confidence_score": 0.5,
+    "explanation": "Ticket contains competing login access failure and subscription payment failure intents.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login",
+      "Billing"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T19",
+    "category": "Billing",
+    "confidence_score": 0.9,
+    "explanation": "Customer asks why a charge occurred after subscription cancellation.",
+    "missing_information": [
+      "Transaction identifier",
+      "Cancellation date"
+    ],
+    "detected_intents": [
+      "Billing"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T20",
+    "category": "Needs Review",
+    "confidence_score": 0.5,
+    "explanation": "Ticket contains dual technical malfunction and billing charge concerns without a dominant intent.",
+    "missing_information": [
+      "Details of technical problem",
+      "Transaction details"
+    ],
+    "detected_intents": [
+      "Technical",
+      "Billing"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T21",
+    "category": "Needs Review",
+    "confidence_score": 0.4,
+    "explanation": "Ticket contains two competing intents: account login failure and subscription refund request.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login",
+      "Refund"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T22",
+    "category": "Needs Review",
+    "confidence_score": 0.4,
+    "explanation": "Ticket contains two competing intents: application crashing and duplicate charges.",
+    "missing_information": [
+      "Technical diagnostic details",
+      "Transaction details"
+    ],
+    "detected_intents": [
+      "Technical",
+      "Billing"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T23",
+    "category": "Needs Review",
+    "confidence_score": 0.4,
+    "explanation": "Ticket combines password reset issue with subscription cancellation and refund request.",
+    "missing_information": [],
+    "detected_intents": [
+      "Login",
+      "Refund"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T24",
+    "category": "Needs Review",
+    "confidence_score": 0.4,
+    "explanation": "Ticket combines account access failure with payment page error.",
+    "missing_information": [
+      "Details of payment error"
+    ],
+    "detected_intents": [
+      "Login",
+      "Billing"
+    ],
+    "ambiguity_flag": true,
+    "requires_human_review": true
+  },
+  {
+    "id": "T25",
+    "category": "Technical",
+    "confidence_score": 0.85,
+    "explanation": "Customer reports app crashing whenever opened.",
+    "missing_information": [
+      "Device/OS",
+      "App version",
+      "Steps to reproduce"
+    ],
+    "detected_intents": [
+      "Technical"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T26",
+    "category": "Refund",
+    "confidence_score": 0.9,
+    "explanation": "Customer explicitly requests a refund for a purchase.",
+    "missing_information": [
+      "Transaction/order ID",
+      "Purchase date"
+    ],
+    "detected_intents": [
+      "Refund"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T27",
+    "category": "Login",
+    "confidence_score": 0.9,
+    "explanation": "Customer reports inability to log into account.",
+    "missing_information": [
+      "Account identifier/email",
+      "Exact login error message"
+    ],
+    "detected_intents": [
+      "Login"
+    ],
+    "ambiguity_flag": false,
+    "requires_human_review": false
+  },
+  {
+    "id": "T28",
+    "category": "Needs Review",
+    "confidence_score": 0.2,
+    "explanation": "Message lacks sufficient detail to identify a specific support intent.",
+    "missing_information": [
+      "Detailed problem description"
+    ],
+    "detected_intents": [],
+    "ambiguity_flag": false,
+    "requires_human_review": true
+  },
+  {
+    "id": "T29",
+    "category": "Needs Review",
+    "confidence_score": 0.1,
+    "explanation": "Message contains exclamation without specifying problem details.",
+    "missing_information": [
+      "Detailed problem description"
+    ],
+    "detected_intents": [],
+    "ambiguity_flag": false,
+    "requires_human_review": true
+  },
+  {
+    "id": "T30",
+    "category": "Needs Review",
+    "confidence_score": 0.2,
+    "explanation": "Customer expresses frustration without describing the underlying issue.",
+    "missing_information": [
+      "Detailed problem description"
+    ],
+    "detected_intents": [],
+    "ambiguity_flag": false,
+    "requires_human_review": true
+  }
+]

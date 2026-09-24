@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support Triage AI — Case Study</title>
+<style>
+:root{--bg:#f5f4ef;--text:#111214;--muted:#6c6c68;--card:#fff;--border:#d9d8d2;--accent:#7a0921;--soft:#eeeae4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:1120px;margin:auto;padding:48px 24px 80px}.section{margin:0 0 110px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(64px,10vw,130px);line-height:.84;letter-spacing:-.07em;margin:22px 0 30px;max-width:1000px}h2{font-size:clamp(36px,6vw,66px);line-height:.98;letter-spacing:-.05em;margin:16px 0 22px;max-width:900px}
+.lead{font-size:21px;line-height:1.55;color:var(--muted);max-width:760px}.grid2,.grid3{display:grid;gap:16px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:25px}.dark{background:#111214;color:#f7f6f1;border-radius:30px;padding:32px}.dark .eyebrow,.dark .muted{color:#aaa}.stat{font-size:52px;font-weight:850;letter-spacing:-.06em;margin-top:8px}.muted{color:var(--muted)}
+.flow{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.node,.pill{border:1px solid var(--border);border-radius:999px;padding:9px 13px;background:var(--card);font-weight:700;font-size:13px}.dark .node{background:#1d1e20;border-color:#333}.arrow{color:var(--muted)}
+.ticket{width:100%;text-align:left;font:inherit;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;cursor:pointer;transition:.18s}.ticket:hover,.ticket.active{border-color:var(--accent);transform:translateY(-2px)}.decision{margin-top:16px;min-height:190px}.bar{height:9px;border-radius:20px;background:#ddd;overflow:hidden;margin-top:15px}.bar span{height:100%;display:block;background:var(--accent)}.quote{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.03;letter-spacing:-.045em;margin:0}.tag{display:inline-block;background:var(--soft);border-radius:999px;padding:8px 11px;margin:5px 5px 0 0;font-size:12px;font-weight:800}
+ul{padding-left:20px;line-height:1.9}.hero-meta{margin-top:42px}.accent{color:var(--accent)}
+@media(max-width:760px){main{padding:30px 17px 60px}.section{margin-bottom:76px}.grid2,.grid3{grid-template-columns:1fr}.lead{font-size:18px}.flow{align-items:flex-start}.arrow{display:none}}
+</style>
+</head>
+<body><main>
+<section class="section">
+<div class="eyebrow">AI PM · Product Design · AI Evaluation</div>
+<h1>Support<br><span class="accent">Triage AI.</span></h1>
+<p class="lead">Designing an AI copilot that helps frontline support agents understand messy customer tickets — without taking the human out of the loop.</p>
+<div class="grid3 hero-meta"><div class="card"><div class="eyebrow">Role</div><b>AI PM + Product Designer</b></div><div class="card"><div class="eyebrow">Product</div><b>Agent-facing AI copilot</b></div><div class="card"><div class="eyebrow">Status</div><b>Working prototype</b></div></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">01 · The Problem</div><h2>The hard part isn't reading a ticket.</h2>
+<div class="grid2"><div><p class="lead">It's deciding what the ticket actually means — and whether you're confident enough to act on it.</p></div>
+<div class="dark"><div class="eyebrow">Customer ticket</div><p style="font-size:20px;line-height:1.5">“I cancelled my subscription last week, but I was charged again and I still haven't received my refund.”</p><div class="flow"><span class="node">Billing?</span><span>→</span><span class="node">Refund?</span><span>→</span><span class="node">Both?</span></div></div></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">02 · Core Insight</div><div class="card"><p class="quote">The product shouldn't just classify tickets. It should know when classification is safe.</p><p class="muted">This became the foundation of the human-in-the-loop experience.</p></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">03 · AI Experimentation</div><h2>I didn't trust the first prompt.</h2><p class="lead">I tested the model, inspected where it failed, changed the prompt based on those failures, and tested again.</p>
+<div class="grid2"><div class="card"><div class="eyebrow">V1 · unseen synthetic set</div><div class="stat">8/10</div><div class="bar"><span style="width:80%"></span></div><p class="muted">Financial keywords could overpower the actual context.</p></div>
+<div class="card"><div class="eyebrow">V2 · same unseen set</div><div class="stat">10/10</div><div class="bar"><span style="width:100%"></span></div><p class="muted">Targeted ambiguity and insufficient-evidence rules fixed the observed failures.</p></div></div>
+<div class="grid2" style="margin-top:16px"><div class="card"><b>Failure A — Payment flow error</b><p class="muted">V1 leaned toward Billing because of payment language.</p><span class="tag">Context beats keywords</span></div><div class="card"><b>Failure B — “Money disappeared.”</b><p class="muted">V1 was confident despite insufficient evidence.</p><span class="tag">Confidence ≠ certainty</span></div></div>
+<p class="muted" style="margin-top:14px">These are prototype results on small synthetic benchmarks, not production accuracy.</p>
+</section>
+
+<section class="section">
+<div class="eyebrow">04 · Interactive Evaluation</div><h2>What should the AI do?</h2><p class="lead">Pick a ticket to inspect the product behavior.</p>
+<div class="grid3" id="tickets"><button class="ticket active" data-i="0"><div class="eyebrow">Case 01</div><b>“I forgot my password.”</b></button><button class="ticket" data-i="1"><div class="eyebrow">Case 02</div><b>“Payment went through but I can't login.”</b></button><button class="ticket" data-i="2"><div class="eyebrow">Case 03</div><b>“Money disappeared from my account.”</b></button></div>
+<div class="card decision" id="decision"></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">05 · Product Design</div><h2>An AI copilot, not another chatbot.</h2>
+<div class="dark"><div class="grid3"><div><div class="eyebrow">Inbox</div><h3>Tickets & states</h3></div><div><div class="eyebrow">Ticket</div><h3>Message & context</h3></div><div><div class="eyebrow">AI Copilot</div><h3>Recommendation & action</h3></div></div><p class="muted">The AI stays beside the workflow. Confidence, rationale, missing information, approve, override and review states remain visible.</p></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">06 · Product Insight</div><h2>One boolean wasn't enough.</h2>
+<div class="grid2"><div class="card"><div class="eyebrow">Current</div><div class="stat" style="font-size:32px">ambiguity_flag</div><p class="muted">A boolean hides why human review is required.</p></div><div class="card"><div class="eyebrow">Proposed evolution</div><span class="tag">LOW_CONFIDENCE</span><span class="tag">MULTI_INTENT</span><span class="tag">INSUFFICIENT_INFORMATION</span><span class="tag">MODEL_ERROR</span><p class="muted">Review reasons make uncertainty more explainable and measurable.</p></div></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">07 · Deliberate Scope</div><h2>What I didn't build.</h2>
+<div class="grid3"><div class="card"><b>Autonomous routing</b><p class="muted">Human confirmation stays central.</p></div><div class="card"><b>Customer auto-replies</b><p class="muted">No unsupervised customer communication.</p></div><div class="card"><b>Generic chatbot</b><p class="muted">Focused on agent workflow.</p></div><div class="card"><b>CRM replacement</b><p class="muted">Copilot, not a new helpdesk.</p></div><div class="card"><b>RAG-heavy engine</b><p class="muted">Triage remains the core problem.</p></div><div class="card"><b>Large BI suite</b><p class="muted">Avoiding feature bloat.</p></div></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">08 · Evidence vs Validation</div><div class="grid2"><div class="card"><div class="eyebrow">Prototype evidence</div><ul><li>V1 → V2 prompt experimentation</li><li>10/10 unseen synthetic V2 set</li><li>10/10 adversarial synthetic suite</li><li>Working Gemini-powered MVP</li></ul></div><div class="card"><div class="eyebrow">Still unvalidated</div><ul><li>Real support-agent usability</li><li>Real-world ticket performance</li><li>Actual time-to-triage improvement</li><li>Long-term adoption and trust</li></ul></div></div>
+</section>
+
+<section class="dark"><div class="eyebrow">Reflection</div><p class="quote">AI product design isn't about making the model look confident.</p><p style="font-size:21px;color:#bbb;max-width:780px">It's about designing what happens when the model is uncertain — and giving the human the right amount of control.</p></section>
+</main>
+<script>
+const cases=[
+{cat:"Login",conf:"95%",state:"Clear Intent",reason:"Single, explicit intent with enough information to classify."},
+{cat:"Needs Review",conf:"50%",state:"Multi-Intent",reason:"Billing and Login are both present. Human review is the safer action."},
+{cat:"Needs Review",conf:"40%",state:"Insufficient Information",reason:"Financial language alone is not enough evidence to determine Billing, Refund, or another issue."}
+];
+const d=document.getElementById("decision");
+function render(i){const c=cases[i];d.innerHTML=`<div class="eyebrow">AI triage result</div><div class="grid2" style="margin-top:15px"><div><div class="stat" style="font-size:30px">${c.cat}</div><div class="muted">${c.state}</div></div><div><div class="stat" style="font-size:30px">${c.conf}</div><div class="muted">confidence signal</div></div></div><p style="margin-top:24px">${c.reason}</p>`}
+document.querySelectorAll(".ticket").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".ticket").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(+b.dataset.i)}));render(0);
+</script></body></html>

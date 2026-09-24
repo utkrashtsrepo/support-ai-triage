@@ -1,0 +1,449 @@
+[
+  {
+    "id": "T01",
+    "type": "clear_billing",
+    "subject": "Unexpected subscription charge",
+    "customer_message": "I was charged ₹999 for my subscription this month. Can you explain what this charge is for?",
+    "expected_category": "Billing",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear billing inquiry about a subscription charge."
+  },
+  {
+    "id": "T02",
+    "type": "clear_billing",
+    "subject": "Payment failed during renewal",
+    "customer_message": "My card was declined when I tried to renew my subscription.",
+    "expected_category": "Billing",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear payment failure during subscription renewal."
+  },
+  {
+    "id": "T03",
+    "type": "clear_billing",
+    "subject": "Duplicate subscription charge",
+    "customer_message": "I see two identical charges of ₹499 on my bank statement for the same subscription.",
+    "expected_category": "Billing",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing"
+    ],
+    "expected_missing_information": [],
+    "reason": "Customer is reporting a duplicate billing charge."
+  },
+  {
+    "id": "T04",
+    "type": "clear_billing",
+    "subject": "Request for invoice",
+    "customer_message": "Can I get an invoice for my payment from yesterday?",
+    "expected_category": "Billing",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing"
+    ],
+    "expected_missing_information": [
+      "Transaction or invoice identifier"
+    ],
+    "reason": "Clear invoice request; an identifier may be useful for locating the transaction."
+  },
+  {
+    "id": "T05",
+    "type": "clear_login",
+    "subject": "Forgot password",
+    "customer_message": "I forgot my password and can't log into my account.",
+    "expected_category": "Login",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Login"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear account access and password problem."
+  },
+  {
+    "id": "T06",
+    "type": "clear_login",
+    "subject": "OTP not arriving",
+    "customer_message": "The OTP never arrives when I try to sign in.",
+    "expected_category": "Login",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Login"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear authentication/OTP issue."
+  },
+  {
+    "id": "T07",
+    "type": "clear_login",
+    "subject": "Login rejected",
+    "customer_message": "My account credentials are correct but the website keeps rejecting my login.",
+    "expected_category": "Login",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Login"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear sign-in failure."
+  },
+  {
+    "id": "T08",
+    "type": "clear_login",
+    "subject": "Password reset instructions",
+    "customer_message": "How do I reset my account password?",
+    "expected_category": "Login",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Login"
+    ],
+    "expected_missing_information": [],
+    "reason": "Clear password/account access request."
+  },
+  {
+    "id": "T09",
+    "type": "clear_refund",
+    "subject": "Refund request",
+    "customer_message": "I want a refund for my subscription.",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction or subscription identifier",
+      "Purchase date"
+    ],
+    "reason": "Explicit request for money to be returned."
+  },
+  {
+    "id": "T10",
+    "type": "clear_refund",
+    "subject": "Refund status",
+    "customer_message": "I cancelled my subscription last week. When will I receive my refund?",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction or subscription identifier"
+    ],
+    "reason": "Customer is asking about an existing refund."
+  },
+  {
+    "id": "T11",
+    "type": "clear_refund",
+    "subject": "Return subscription payment",
+    "customer_message": "Please return the ₹799 I paid for this month's subscription.",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction or subscription identifier",
+      "Purchase date"
+    ],
+    "reason": "Explicit request to return a payment."
+  },
+  {
+    "id": "T12",
+    "type": "clear_refund",
+    "subject": "Refund not received",
+    "customer_message": "My refund was approved three days ago but I haven't received the money yet.",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction or refund identifier"
+    ],
+    "reason": "Clear refund-status issue."
+  },
+  {
+    "id": "T13",
+    "type": "clear_technical",
+    "subject": "Android app crashes",
+    "customer_message": "The Android app crashes every time I open the settings page.",
+    "expected_category": "Technical",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Technical"
+    ],
+    "expected_missing_information": [
+      "Device/OS version",
+      "App version",
+      "Steps to reproduce"
+    ],
+    "reason": "Clear product malfunction despite missing diagnostic details."
+  },
+  {
+    "id": "T14",
+    "type": "clear_technical",
+    "subject": "Export button not working",
+    "customer_message": "The export button does nothing when I click it.",
+    "expected_category": "Technical",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Technical"
+    ],
+    "expected_missing_information": [
+      "Browser/device",
+      "Steps to reproduce"
+    ],
+    "reason": "Clear feature malfunction."
+  },
+  {
+    "id": "T15",
+    "type": "clear_technical",
+    "subject": "500 error during upload",
+    "customer_message": "I'm getting a 500 error when trying to upload a file.",
+    "expected_category": "Technical",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Technical"
+    ],
+    "expected_missing_information": [
+      "File type/size",
+      "Browser/device",
+      "Steps to reproduce"
+    ],
+    "reason": "Clear technical error during file upload."
+  },
+  {
+    "id": "T16",
+    "type": "clear_technical",
+    "subject": "Dashboard stuck loading",
+    "customer_message": "The dashboard has been loading indefinitely for the last ten minutes.",
+    "expected_category": "Technical",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Technical"
+    ],
+    "expected_missing_information": [
+      "Browser/device",
+      "Steps to reproduce"
+    ],
+    "reason": "Clear product malfunction."
+  },
+  {
+    "id": "T17",
+    "type": "boundary",
+    "subject": "Duplicate charge refund request",
+    "customer_message": "I was charged twice. Can I get one of the payments back?",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing",
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction identifier",
+      "Date of transaction"
+    ],
+    "reason": "Although the underlying issue is duplicate billing, the explicit requested outcome is a refund."
+  },
+  {
+    "id": "T18",
+    "type": "boundary",
+    "subject": "Login blocked by payment issue",
+    "customer_message": "I can't log in because my subscription payment failed.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Login",
+      "Billing"
+    ],
+    "expected_missing_information": [],
+    "reason": "Two strong intents are present and neither is clearly the sole issue."
+  },
+  {
+    "id": "T19",
+    "type": "boundary",
+    "subject": "Charged after cancellation",
+    "customer_message": "Why was I charged after I cancelled my subscription?",
+    "expected_category": "Billing",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Billing"
+    ],
+    "expected_missing_information": [
+      "Transaction identifier",
+      "Cancellation date"
+    ],
+    "reason": "The primary request is an explanation for an unexpected charge; no explicit refund request is made."
+  },
+  {
+    "id": "T20",
+    "type": "boundary",
+    "subject": "App broken and possible charge",
+    "customer_message": "The app isn't working and I think I was charged for it too.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Technical",
+      "Billing"
+    ],
+    "expected_missing_information": [
+      "Details of the technical problem",
+      "Transaction details"
+    ],
+    "reason": "Technical and billing issues are both present without a clearly dominant intent."
+  },
+  {
+    "id": "T21",
+    "type": "multi_intent",
+    "subject": "Login and refund",
+    "customer_message": "I can't log into my account. Also, please refund my subscription.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Login",
+      "Refund"
+    ],
+    "expected_missing_information": [],
+    "reason": "Two independent customer requests require separate handling."
+  },
+  {
+    "id": "T22",
+    "type": "multi_intent",
+    "subject": "App crash and duplicate charge",
+    "customer_message": "The app keeps crashing and I was charged twice this month.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Technical",
+      "Billing"
+    ],
+    "expected_missing_information": [
+      "Technical diagnostic details",
+      "Transaction details"
+    ],
+    "reason": "Technical and billing issues are both significant."
+  },
+  {
+    "id": "T23",
+    "type": "multi_intent",
+    "subject": "Password reset and refund",
+    "customer_message": "My password reset isn't working, and I want to cancel and get my money back.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Login",
+      "Refund"
+    ],
+    "expected_missing_information": [],
+    "reason": "Account access and refund/cancellation requests are both present."
+  },
+  {
+    "id": "T24",
+    "type": "multi_intent",
+    "subject": "Account access and payment error",
+    "customer_message": "I can't access my account and the payment page is also showing an error.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [
+      "Login",
+      "Billing"
+    ],
+    "expected_missing_information": [
+      "Details of payment error"
+    ],
+    "reason": "Login and payment issues are both meaningful and competing."
+  },
+  {
+    "id": "T25",
+    "type": "missing_information",
+    "subject": "App crashes",
+    "customer_message": "The app crashes whenever I open it.",
+    "expected_category": "Technical",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Technical"
+    ],
+    "expected_missing_information": [
+      "Device/OS",
+      "App version",
+      "Steps to reproduce"
+    ],
+    "reason": "The intent is clearly technical even though diagnostic details are missing."
+  },
+  {
+    "id": "T26",
+    "type": "missing_information",
+    "subject": "Refund for purchase",
+    "customer_message": "I need a refund for my purchase.",
+    "expected_category": "Refund",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Refund"
+    ],
+    "expected_missing_information": [
+      "Transaction/order ID",
+      "Purchase date"
+    ],
+    "reason": "The refund intent is clear; transaction details are missing."
+  },
+  {
+    "id": "T27",
+    "type": "missing_information",
+    "subject": "Can't log in",
+    "customer_message": "I can't log in to my account.",
+    "expected_category": "Login",
+    "expected_human_review": false,
+    "expected_intents": [
+      "Login"
+    ],
+    "expected_missing_information": [
+      "Account identifier/email",
+      "Exact login error"
+    ],
+    "reason": "The login intent is clear despite limited diagnostic context."
+  },
+  {
+    "id": "T28",
+    "type": "edge_case",
+    "subject": "Not working",
+    "customer_message": "It doesn't work.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [],
+    "expected_missing_information": [
+      "Detailed problem description"
+    ],
+    "reason": "The message does not identify a support intent."
+  },
+  {
+    "id": "T29",
+    "type": "edge_case",
+    "subject": "Help",
+    "customer_message": "HELP!!!",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [],
+    "expected_missing_information": [
+      "Detailed problem description"
+    ],
+    "reason": "Insufficient information to identify the issue."
+  },
+  {
+    "id": "T30",
+    "type": "edge_case",
+    "subject": "Frustrated customer",
+    "customer_message": "Your service is terrible. I've been trying to fix this all morning and nobody is helping me.",
+    "expected_category": "Needs Review",
+    "expected_human_review": true,
+    "expected_intents": [],
+    "expected_missing_information": [
+      "Detailed problem description"
+    ],
+    "reason": "The customer is frustrated but does not specify the underlying issue."
+  }
+]

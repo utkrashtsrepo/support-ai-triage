@@ -1,0 +1,52 @@
+[
+  {
+    "id": "U01",
+    "subject": "Charged after changing plans",
+    "customer_message": "I downgraded my subscription yesterday, but I was still charged the old monthly amount today. Why did this happen?"
+  },
+  {
+    "id": "U02",
+    "subject": "OTP arrives too late",
+    "customer_message": "The login OTP eventually arrives, but by then it has already expired. I still can't sign in."
+  },
+  {
+    "id": "U03",
+    "subject": "Refund for duplicate payment",
+    "customer_message": "I accidentally paid twice for the same order. Please refund the extra payment."
+  },
+  {
+    "id": "U04",
+    "subject": "Payment page keeps failing",
+    "customer_message": "I can't complete my subscription because the payment page keeps showing an error. I've tried three times."
+  },
+  {
+    "id": "U05",
+    "subject": "App crashes after update",
+    "customer_message": "The app worked yesterday, but after today's update it crashes every time I open the notifications screen."
+  },
+  {
+    "id": "U06",
+    "subject": "Account locked after password attempts",
+    "customer_message": "I entered the wrong password several times and now my account is locked. How can I get back in?"
+  },
+  {
+    "id": "U07",
+    "subject": "Money missing",
+    "customer_message": "Money disappeared from my account and I don't know why. Please fix this."
+  },
+  {
+    "id": "U08",
+    "subject": "Can't access account after payment",
+    "customer_message": "My subscription payment went through, but now I can't log into my account. I need access urgently."
+  },
+  {
+    "id": "U09",
+    "subject": "Export worked before",
+    "customer_message": "The CSV export was working last week, but now clicking Export does nothing. Can you fix it?"
+  },
+  {
+    "id": "U10",
+    "subject": "Refund status after cancellation",
+    "customer_message": "I cancelled my subscription five days ago and was told I would get my money back, but I haven't received it yet. Can you check the refund?"
+  }
+]
