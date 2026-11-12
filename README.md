@@ -27,7 +27,7 @@ Support Triage AI is an AI-assisted triage companion designed for Tier 1 custome
 It analyzes incoming customer complaints, identifies intent, predicts urgency, detects missing information, and generates suggested responses — while keeping human support agents in control.
 
 <p align="center">
-  <img src="docs/assets/dashboard-preview.png" alt="Support Triage AI Dashboard" width="100%" />
+  <img src="dashboard-preview.png" alt="Support Triage AI Dashboard" width="100%" />
 </p>
 
 <p align="center">
